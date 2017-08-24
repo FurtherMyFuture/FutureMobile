@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import { Video } from 'react-native-video'
+import Video from 'react-native-video';
 
 export default class Future extends Component {
   render() {
@@ -20,7 +20,7 @@ export default class Future extends Component {
         <Video
           repeat
           resizeMode='cover'
-          source={require('./assets/video/turntable.mp4')}
+          source={require('./assets/video/apprentice.mp4')}
           style={styles.backgroundVideo}
           />
       </View>

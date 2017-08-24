@@ -11,21 +11,18 @@ import {
   Text,
   View
 } from 'react-native';
+import Video from 'react-native-video';
 
 export default class Future extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Video
+          repeat
+          resizeMode='cover'
+          source={require('./assets/video/apprentice.mp4')}
+          style={styles.backgroundVideo}
+          />
       </View>
     );
   }
