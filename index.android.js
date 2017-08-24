@@ -12,17 +12,18 @@ import {
   View
 } from 'react-native';
 import Video from 'react-native-video';
+import { VideoComponent } from 'VideoComponent'
 
 export default class Future extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Video
-          repeat
-          resizeMode='cover'
+        <VideoComponent
           source={require('./assets/video/apprentice.mp4')}
-          style={styles.backgroundVideo}
-          />
+          muted={true}
+          >
+          <View/>
+        </VideoComponent>
       </View>
     );
   }
