@@ -7,25 +7,28 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  StatusBar,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import Video from 'react-native-video';
+import { VideoComponent } from 'VideoComponent'
 
 export default class Future extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <StatusBar
+          backgroundColor="blue"
+          barStyle="light-content"
+        />
+        <VideoComponent
+          source={require('./assets/video/apprentice.mp4')}
+          muted={true}
+          >
+          <View/>
+        </VideoComponent>
       </View>
     );
   }
@@ -33,21 +36,9 @@ export default class Future extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'transparent',
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+})
 
 AppRegistry.registerComponent('Future', () => Future);
