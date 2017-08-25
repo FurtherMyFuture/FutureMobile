@@ -6,13 +6,9 @@
 
 import { AppRegistry, StatusBar, StyleSheet, View } from 'react-native'
 import { VideoComponent } from 'VideoComponent'
-import React, { Component } from 'react'
+import React from 'react'
 
-const add = (a: string, b: number): number => a + b
-
-add(1, 2)
-
-export function Future(): Component<any> {
+export function Future(): React.Element<any> {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="blue" barStyle="light-content" />

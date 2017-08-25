@@ -24,6 +24,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "0.491",
     "jest": "20.0.4",
     "prettier": "^1.5.3",
     "prettier-eslint": "^6.4.2",
