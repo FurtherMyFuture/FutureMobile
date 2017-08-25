@@ -8,27 +8,31 @@
     "flow": "flow"
   },
   "dependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint-plugin-flowtype": "^2.35.0",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.2",
-    "react-native-video": "^2.0.0"
+    "react-native-video": "^2.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-jest": "20.0.3",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "3.0.1",
     "eslint": "^4.5.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
-    "flow-bin": "0.491",
+    "flow-bin": "0.49.1",
     "jest": "20.0.4",
     "prettier": "^1.5.3",
     "prettier-eslint": "^6.4.2",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-test-renderer": "16.0.0-alpha.12",
+    "redux-devtools": "^3.4.0"
   },
   "jest": {
     "preset": "react-native"
