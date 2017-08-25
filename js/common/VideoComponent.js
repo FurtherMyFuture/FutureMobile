@@ -3,44 +3,39 @@
  * @providesModule VideoComponent
  */
 
-import React from 'react'
-import {
-  AppState,
-  StyleSheet,
-  View,
-} from 'react-native'
+import React from "react";
+import { AppState, StyleSheet, View } from "react-native";
 
-import Video from 'react-native-video'
+import Video from "react-native-video";
 
 type Props = {
   source: { uri: string } | number,
   children?: React.Element<any>,
-  muted: boolean,
-}
+  muted: boolean
+};
 
 type State = {
   paused: boolean,
-  muted: boolean,
-}
+  muted: boolean
+};
 
 export class VideoComponent extends React.Component {
-
-  props: Props
+  props: Props;
   state: State = {
     paused: false,
     muted: this.props.muted
-  }
+  };
 
   componentDidMount() {
-    AppState.addEventListener('change', this._handleAppStateChange)
+    AppState.addEventListener("change", this._handleAppStateChange);
   }
 
   componentWillUnmount() {
-    AppState.removeEventListener('change', this._handleAppStateChange)
+    AppState.removeEventListener("change", this._handleAppStateChange);
   }
 
   render(): React.Element<any> {
-    const { source, children } = this.props
+    const { source, children } = this.props;
     return (
       <View style={styles.container}>
         <Video
@@ -56,16 +51,18 @@ export class VideoComponent extends React.Component {
           {React.Children.only(children)}
         </View>
       </View>
-    )
+    );
   }
 
-  _handleAppStateChange = (currentAppState: 'active' | 'background' | 'inactive') => {
-    this.setState({ paused: currentAppState !== 'active' })
-  }
+  _handleAppStateChange = (
+    currentAppState: "active" | "background" | "inactive"
+  ) => {
+    this.setState({ paused: currentAppState !== "active" });
+  };
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-})
+    flex: 1
+  }
+});
