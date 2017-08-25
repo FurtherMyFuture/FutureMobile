@@ -4,31 +4,26 @@
  */
 
 import React from 'react'
-import {
-  AppState,
-  StyleSheet,
-  View,
-} from 'react-native'
+import { AppState, StyleSheet, View } from 'react-native'
 
 import Video from 'react-native-video'
 
 type Props = {
   source: { uri: string } | number,
   children?: React.Element<any>,
-  muted: boolean,
+  muted: boolean
 }
 
 type State = {
   paused: boolean,
-  muted: boolean,
+  muted: boolean
 }
 
 export class VideoComponent extends React.Component {
-
   props: Props
   state: State = {
     paused: false,
-    muted: this.props.muted
+    muted: this.props.muted,
   }
 
   componentDidMount() {
@@ -59,7 +54,9 @@ export class VideoComponent extends React.Component {
     )
   }
 
-  _handleAppStateChange = (currentAppState: 'active' | 'background' | 'inactive') => {
+  _handleAppStateChange = (
+    currentAppState: 'active' | 'background' | 'inactive'
+  ) => {
     this.setState({ paused: currentAppState !== 'active' })
   }
 }
