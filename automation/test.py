@@ -14,7 +14,7 @@ driver = webdriver.Remote(
 # wait for app to load
 time.sleep(2)
 
-# find the link with the text "Click here" and click on it
+# find the button with the text "Matching" and click on it
 link = driver.find_element_by_xpath('//*[@text="Matching"]')
 link.click()
 
