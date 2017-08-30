@@ -8,6 +8,9 @@
     "flow": "flow"
   },
   "dependencies": {
+    "appium": "^1.6.5",
+    "chromedriver": "^2.31.0",
+    "ios-deploy": "^1.9.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.2",
     "react-native-video": "^2.0.0",
@@ -16,7 +19,8 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "wd": "^1.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -42,5 +46,7 @@
   "jest": {
     "preset": "react-native"
   },
-  "eslintIgnore": ["flow-typed"]
+  "eslintIgnore": [
+    "flow-typed"
+  ]
 }
