@@ -40,7 +40,7 @@ export class VideoComponent extends React.Component {
       <View style={styles.container}>
         <Video
           paused={this.state.paused}
-          muted={this.state.muted}
+          muted={this.props.muted}
           repeat
           resizeMode="cover"
           source={source}
@@ -54,9 +54,7 @@ export class VideoComponent extends React.Component {
     )
   }
 
-  _handleAppStateChange = (
-    currentAppState: 'active' | 'background' | 'inactive'
-  ) => {
+  _handleAppStateChange = (currentAppState: 'active' | 'background' | 'inactive') => {
     this.setState({ paused: currentAppState !== 'active' })
   }
 }
