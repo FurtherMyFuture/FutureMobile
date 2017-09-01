@@ -6,13 +6,18 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 type Props = {
-  onPress: () => void
+  onPress: () => void,
+  testID: string
 }
 
 export function PushToMatchingGameButton(props: Props): React.Element<any> {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={props.onPress} style={styles.touchable}>
+      <TouchableOpacity
+        onPress={props.onPress}
+        style={styles.touchable}
+        testID={props.testID}
+      >
         <Text style={styles.text}>
           {'Matching'}
         </Text>

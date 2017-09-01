@@ -25,8 +25,15 @@ export function VideoOnboardingScene(props: Props): React.Element<any> {
         muted={props.muted}
       >
         <View style={styles.buttons}>
-          <MuteButton onPress={props.toggleMuteAction} muted={props.muted} />
-          <PushToMatchingGameButton onPress={props.pushMatchingScene} />
+          <MuteButton
+            onPress={props.toggleMuteAction}
+            muted={props.muted}
+            testID="onboarding-mute-button"
+          />
+          <PushToMatchingGameButton
+            onPress={props.pushMatchingScene}
+            testID="onboarding-matching-button"
+          />
         </View>
       </VideoComponent>
     </View>
